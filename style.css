@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('fonts/Inconsolata/static/Inconsolata_Condensed-Regular');
+}
+
 html {
     background-color: #2b3136;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inconsolata', monospace;
     color: whitesmoke;
     margin: 0;
     height: 100%;
+}
+
+body {
+    text-shadow: 0 0 1.5px #C8C8C8;
 }
 
 .container {
@@ -29,7 +38,7 @@ html {
 .header {
     padding: 24px;
     margin: 0px;
-    background-image: url('splash.jpg');
+    background-color: #6b6b83;
     background-size: cover;
     height: 100%;
     width: 100%;
