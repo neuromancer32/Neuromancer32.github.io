@@ -1,70 +1,82 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <title>DoctorPepe</title>
+        <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png">
+        <title>Neuromancer</title>
     </head>
     <body>
         <div class="grid-container">
             <div class="header">
+                <p class="top">> Nicholas Schaffer</p>
                 <h1>> Curriculum Vitae</h1>
             </div>
             <div class="nav">
-                <nav>
-                    <ul class="nav">
-                        <li class="nav"><a class="nav active" href="cv.html">Curriculum Vitae</a></li>
-                        <li class="nav"><a class="nav" href="research.html">Research</a></li>
-                        <li class="nav"><a class="nav" href="pp.html">Personal Projects</a></li>
-                    </ul>
-                </nav>
+                <a class = "active" href="cv.html">Curriculum Vitae</a>
+                <a href="research.html">Research</a>
+                <a href="pp.html">Personal Projects</a>
             </div>
             <div class="main">
                 <div class="container">
                     <h2>Education</h2>
-                    <h3>Univeristy of Maryland Baltimore County (UMBC) | 2023</h3>
+                    <div class="entry">
+                        <h3>University of Maryland Baltimore County (UMBC) | 2023</h3>
                     <p>
-                        - Computer Science, BS: Artifical Intelligence and Machine Learning Track <br>
+                        - Computer Science, BS: Artificial Intelligence and Machine Learning Track <br>
                         - Biological Science, BS <br>
                         - Merit Scholarship Recipient
                     </p>
+                    </div>
                 </div>
                 <div class="container">
                     <h2>Research Experience</h2>
-                    <h3>Research Assistant, Yang Lab, Johns Hopkins University | Current</h3>
-                    <h4>Neural Organoids and Assembloids | Brain Machine Interfaces | Flexible Electronics</h4>
-                    <p>
+                    <div class="entry">
+                        <h3>Research Assistant, Yang Lab, Johns Hopkins University | Current</h3>
+                        <h4>Neural Organoids and Assembloids | Brain Machine Interfaces | Flexible Electronics</h4>
+                        <p>
                         -	Performed human STEM cell and organoid cultures. <br>
                         -	Created machine learning pipelines for automatic image analysis in ImageJ. <br>
                         -   Programmed custom software for use in brain machine interfaces and biohybrid intelligence tasks.
-
-                    </p>
-                    <h3>Research Assistant, Jhou Lab, Univeristy of Maryland School of Medicine | 1.5 years</h3>
-                    <h4>Neural Circuitry | Motivation and Addiction | Genomics</h4>
-                    <p>
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <h3>Research Assistant, Jhou Lab, University of Maryland School of Medicine | 1.5 years</h3>
+                        <h4>Neural Circuitry | Motivation and Addiction | Genomics</h4>
+                        <p>
                         -	Developed novel snRNA-Seq workflow and assisted with analyzing sequencing data to examine genetic clustering in midbrain neurons. <br>
                         -	Performed collaborative and independent projects in vivo to investigate research questions related to behavioral and neurotransmitter disruptions during Fentanyl administration. <br>
                         -	Programmed custom software and analysis pipelines using Python, R, MATLAB, and ImageJ. <br>
                         -	Used 3D printing and CAD to design custom laboratory and behavioral equipment. <br>
                         -	Presented results at conferences and contributed to manuscript preparation.
-                    </p>
-                    <h3>Research Intern, Lindberg Lab, Univeristy of Maryland School of Medicine | 3 years</h3>
-                    <h4>Neurodegenerative Diseases | Protein Folding Dynamics | Protein Chaperone Mechanics</h4>
-                    <p>
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <h3>Research Intern, Lindberg Lab, University of Maryland School of Medicine | 3 years</h3>
+                        <h4>Neurodegenerative Diseases | Protein Folding Dynamics | Protein Chaperone Mechanics</h4>
+                        <p>
                         -	In an independent project, performed in vitro proteomics experiments and analyzed protein interactome data, including Gene Ontology analysis. <br>
                         -	Examined the effects of chaperone activity in neurodegenerative disease at the protein-protein interaction level. <br>
                         -	Analyzed data using statistical methods and presented results at lab meetings and conferences. Contributed to authorship of manuscripts.
-
-                    </p>
-                    <h3>UMBC “Phage Hunters” SEA-PHAGES program | 1 year</h3>
-                    <p>
+                        </p>
+                    </div>
+                    <div class="entry">
+                        <h3>UMBC Phage Hunters SEA-PHAGES program | 1 year</h3>
+                        <p>
                         - Isolated and characterized novel actinobacteriophage viruses <br>
                         - Annotated and analyzed whole phage genomes <br>
-                        - Conducted novel bioinformatics research using phage genomic data and presented findings through poster presentations and authorship 
-                    </p>
+                        - Conducted novel bioinformatics research using phage genomic data and presented findings through poster presentations and authorship
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="footer">
-                <button onclick="window.location.href='https://www.github.com/Neuromancer32';" class="buttonGH"></button>
+                <button class="icon-btn" onclick="window.location.href='https://www.github.com/Neuromancer32';" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                        <path fill="whitesmoke" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </body>

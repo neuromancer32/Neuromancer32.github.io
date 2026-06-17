@@ -3,6 +3,12 @@
     src: url('fonts/Inconsolata/static/Inconsolata_Condensed-Regular');
 }
 
+@media (max-width: 600px) {
+    .container {
+        padding-left: 16px;
+    }
+}
+
 html {
     background-color: #2b3136;
     font-family: 'Inconsolata', monospace;
@@ -11,8 +17,16 @@ html {
     height: 100%;
 }
 
-body {
-    text-shadow: 0 0 1.5px #C8C8C8;
+h1 {font-size: 1.6rem; font-weight: 700; margin: 0;}
+h2 {font-size: 1.4rem; font-weight: 700; margin: 0 0 12px;}
+h3 {font-size: 1.1rem; font-weight: 700; margin: 0 0 4px;}
+h4 {font-size: 0.9rem; font-weight: 400; opacity: 0.6; margin: 0 0 8px;}
+body {font-size: 0.9rem; text-shadow: 0 0 1.5px #C8C8C8;}
+
+a {
+    color: hotpink;
+    font-weight: bold;
+    text-shadow: none;
 }
 
 .container {
@@ -32,22 +46,51 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "nav" "main" "footer";
-    grid-template-rows: 1fr 80px;
+    grid-template-rows: auto auto 1fr 60px;
+    min-height: 100vh;
 }
 
 .header {
-    padding: 24px;
-    margin: 0px;
-    background-color: #6b6b83;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    grid-area: header;
+    background: linear-gradient(to right, #aa4b6b, #6b6b83);
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header .top {
+    margin: 0 0 4px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    letter-spacing: 0.03em;
 }
 
 .nav {
-    margin: 0px;
+    background: #222629;
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin: 0;
     grid-area: nav;
+    position: sticky;
+    top: 0;
+}
+
+.nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    opacity: 0.7;
+}
+
+.nav a:last-child {border-right: none;}
+
+.nav a:hover:not(.active) {
+    background: rgba(255,255,255,0.08);
+}
+
+.nav a.active {
+    opacity: 1;
+    background: rgba(255,255,255,0.08);
 }
 
 .main {
@@ -56,95 +99,44 @@ body {
 }
 
 .footer {
-    padding: 6px;
-    margin: 0px;
+    margin-top: auto;
+    padding: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    gap: 8px;
     grid-area: footer;
 }
 
-ul.nav {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    overflow: hidden;
-    position: sticky;
-}
+.active {background: rgba(255,255,255,0.2);}
 
-li.nav {
-    float: left;
-    border-right: 1px solid whitesmoke;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-li.nav:last-child {
-    border-right: none;
-}
-
-li a.nav {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a.nav:hover:not(.active) {
-    background-color: black;
-}
-
-.active {
-    background-color: #333;
-}
-
-.buttonGH {
-    background: url('github.jpg') no-repeat;
-    background-size: contain;
-    cursor: pointer;
-    border: none;
-    height: 35px;
-    width: 35px;
-}
-
-.button {
-    display: inline-block;
-    cursor: pointer;
-    color: whitesmoke;
-    background-color: #2b3136;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    margin: 5px;
+.entry {
+    padding: 8px;
+    margin-bottom: 12px;
+    background: rgba(255,255,255,0.04);
     border-radius: 4px;
-    border: 2px solid whitesmoke;
-    width: 25%;
-    transition: all 0.5s;
 }
 
-.button span {
+.project {
+    border-left: 3px solid #aa4b6b;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 4px;
+}
+
+.icon-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
+    transition: background 0.2s;
+    color: #f5f5f5;
+    font-size: 20px;
 }
 
-.button span:after {
-    content: '\00bb';
-    position: absolute;
-    right: -20px;
-    transition: 0.5s;
-    opacity: 0;
-}
-
-.button:hover span {
-    padding-right: 25px;
-}
-
-.button:hover span:after {
-    opacity: 1;
-  }
-
-a {
-  color: hotpink;
-  font-weight: bold;
-}
+.icon-btn:hover { background: rgba(255,255,255,0.2); }

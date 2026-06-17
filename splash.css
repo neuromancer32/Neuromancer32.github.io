@@ -69,11 +69,29 @@ li a:hover:not(.active) {
     background-color: darkgray;
 }
 
-.buttonGH {
-    background: url('github.jpg') no-repeat;
-    background-size: contain;
-    cursor: pointer;
-    border: none;
-    height: 35px;
-    width: 35px;
+.icon-btn {
+background: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.25);
+border-radius: 4px;
+width: 36px;
+height: 36px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: background 0.2s;
+color: #f5f5f5;
+font-size: 20px;
+}
+
+.icon-btn:hover { background: rgba(255,255,255,0.2); }
+
+.cursor::after {
+content: '_';
+animation: blink 1s step-end infinite;
+font-weight: 400;
+}
+
+@keyframes blink {
+50% { opacity: 0; }
 }
