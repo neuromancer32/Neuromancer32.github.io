@@ -135,3 +135,73 @@ a {
 }
 
 .icon-btn:hover { background: rgba(255,255,255,0.2); }
+
+.interests {
+    color: #8fa874;
+}
+
+.tag {
+    border: 1px solid #8fa874;
+    color: #8fa874;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    white-space: nowrap;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.links summary {
+    color: #dcc48e;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.links summary::-webkit-details-marker { display: none; }
+
+.bib {
+    background: rgba(0,0,0,0.25);
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 6px 0 0;
+}
+
+.pub {
+    display: flex;
+    gap: 24px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.pub:last-of-type {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.year {
+    flex: 0 0 48px;
+    color: #8fa874;
+    font-weight: 700;
+}
+
+.pub-text {
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .pub {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
